@@ -1,29 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Place Details</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <main>
         <section id="place-details">
-            <!-- Place details will be populated dynamically -->
+            <div class="place-card-large">
+                <img src="place1.jpg" alt="Beautiful Beach House" class="place-image">
+                <h2>Beautiful Beach House</h2>
+                <p>Price Per Night: $100</p>
+                <p>Location: Los Angeles, United States</p>
+            </div>
         </section>
+
         <section id="reviews">
+            <h2>Reviews</h2>
+            <div class="review-card">
+                <p><strong>User:</strong> Jane Smith</p>
+                <p><strong>Comment:</strong> Great place to stay!</p>
+                <p><strong>Rating:</strong> ★★★★☆</p>
+            </div>
+            <div class="review-card">
+                <p><strong>User:</strong> Robert Brown</p>
+                <p><strong>Comment:</strong> Amazing location and very comfortable.</p>
+                <p><strong>Rating:</strong> ★★★★★</p>
+            </div>
             <!-- Reviews will be populated dynamically -->
         </section>
         <section id="add-review">
+            <a href="./add_review.html"></a>
             <h2>Add a Review</h2>
             <form id="review-form">
                 <label for="review-text">Review:</label>
                 <textarea id="review-text" name="review-text" required></textarea>
-                
+
+                <label for="review-username">Your Name:</label>
+                <input type="text" id="review-username" name="review-username" required>
+
+                <label for="review-rating">Rating (1 to 5 stars):</label>
+                <input type="number" id="review-rating" name="review-rating" min="1" max="5" required>
+
                 <button type="submit">Submit</button>
             </form>
         </section>
     </main>
     <script src="scripts.js"></script>
 </body>
+
 </html>

@@ -3,22 +3,56 @@
   You'll probably need to override some of theese styles.
 */
 
-* {
+body,
+h1,
+p {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f5f5f5;
+    color: #f5f5f5;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+    background-color: #fa9a09;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    height: 50px;
+}
+
+#login-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.details-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+header nav {
+    display: inline-block;
+    margin: 0 10px;
 }
 
 nav a {
@@ -27,6 +61,78 @@ nav a {
     margin-left: 1rem;
 }
 
+#login-link {
+    text-decoration: none;
+    color: #001aff;
+}
+
 main {
-    padding: 2rem;
+    padding: 20px;
+}
+
+.place-card,
+.review-card {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #17b37f;
+}
+
+.place-card img,
+.place-image-large {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.place-details,
+.review-card {
+    padding: 10px;
+}
+
+.review-card {
+    margin-top: 10px;
+}
+
+#add-review {
+    margin-top: 20px;
+}
+
+#add-review-form {
+    display: none;
+}
+
+.add-review-link {
+    display: none;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+#review-form textarea,
+#review-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+#review-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#review-form button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+    color: #333;
 }
