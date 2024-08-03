@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function loginUser(email, password) {
   try {
-    const response = await fetch('https://your-api-url/login', {
+    const response = await fetch('http://127.0.0.1:5000/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -34,10 +34,16 @@ async function loginUser(email, password) {
 
     if (response.ok) {
       const data = await response.json();
-      document.cookie = `token=${data.access_token}; path=/`;
-      window.location.href = 'index.html';
+
+      if (data.access_token) {
+        document.cookie = `token=${data.access_token}; path=/`;
+        window.location.href = 'index.html';
+      } else {
+        alert('Unexpected response format.');
+      }
     } else {
-      alert('Login failed: ' + response.statusText);
+      const errorData = await response.json();
+      alert('Login failed: ' + (errorData.message || response.statusText));
     }
   } catch (error) {
     console.error('Login error:', error);
